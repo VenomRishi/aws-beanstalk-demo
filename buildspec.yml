@@ -1,13 +1,13 @@
 version: 0.2
 phases:
-  pre-build:
+  pre_build:
     commands:
       - echo "Entered the pre-build"
   build:
     commands:
       - echo "Entered the build"
       - mvn clean prepare-package war:explode
-  post-build:
+  post_build:
     commands:
       - echo "Entered the post-build"
       - mv targer/deploy ./
