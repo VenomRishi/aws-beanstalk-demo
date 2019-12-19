@@ -11,4 +11,8 @@ public class HelloController {
 	public String hello() {
 		return "Hello World2";
 	}
+	@GetMapping("/aditya")
+	public String adi() {
+		return "Aditya is bridgelabz hero";
+	}
 }
