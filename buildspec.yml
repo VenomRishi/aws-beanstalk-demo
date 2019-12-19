@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  pre-build:
+    commands:
+      - echo "Entered the pre-build"
+  build:
+    commands:
+      - echo "Entered the build"
+      - mvn clean prepare-package war:explode
+  post-build:
+    commands:
+      - echo "Entered the post-build"
+      - mv targer/deploy ./
+artifacts:
+  files:
+   - deploy/**/*
